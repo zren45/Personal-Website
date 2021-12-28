@@ -1,0 +1,8 @@
+{
+  "..\\components\\layout\\main.js -> ../mac": {
+    "id": "./components/mac.js",
+    "files": [
+      "static/chunks/components_mac_js.js"
+    ]
+  }
+}
