@@ -7,6 +7,7 @@ import {
   Img,
   Flex,
   useColorModeValue,
+  Heading,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -22,7 +23,7 @@ export default function Home() {
           w="100%"
         >
           <Box textAlign={{ base: "center", md: "left" }}>
-            <Text
+            <Heading
               bgGradient={useColorModeValue(
                 "linear(to-l,#18c9ff 30%,#8627f1 50%,#f91f63 70%,#ffb420 94%)",
                 "linear(to-l, #a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%)"
@@ -32,19 +33,22 @@ export default function Home() {
               bgClip="text"
               fontSize={{ base: "48", md: "8xl" }}
               fontWeight="extrabold"
+              letterSpacing={-1}
             >
               Hi, I'm Ren
-            </Text>
-            <Text
+            </Heading>
+            <Heading
               bgGradient={useColorModeValue(
                 "linear(to-l,#18c9ff 30%,#8627f1 50%,#f91f63 70%,#ffb420 94%)",
                 "linear(to-l, #a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%)"
               )}
               bgClip="text"
+              letterSpacing={-1}
               fontSize={{ base: "4xl", md: "6xl" }}
+              mt={8}
             >
               a Developer{" "}
-            </Text>
+            </Heading>
           </Box>
           <Box
             flexShrink={0}
