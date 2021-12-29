@@ -45,9 +45,9 @@ export default function Home() {
               bgClip="text"
               letterSpacing={-1}
               fontSize={{ base: "4xl", md: "6xl" }}
-              mt={8}
+              mt={{ md: 8 }}
             >
-              a Developer{" "}
+              A Developer{" "}
             </Heading>
           </Box>
           <Box
