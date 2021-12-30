@@ -8,8 +8,11 @@ import {
   Flex,
   useColorModeValue,
   Heading,
+  Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import Project from "../components/project";
 
 export default function Home() {
   return (
@@ -71,6 +74,9 @@ export default function Home() {
           </Box>
         </Box>
       </Container>
+      <motion.div whileHover={{ scale: 1.1 }}>
+        <Project>ok</Project>
+      </motion.div>
     </Layout>
   );
 }
