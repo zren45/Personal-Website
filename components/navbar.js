@@ -116,7 +116,7 @@ const Navbar = (props) => {
                 <MenuItem
                   as={Link}
                   target="_blank"
-                  href="https://github.com/zren45"
+                  href="https://github.com/zren45/Personal-Website"
                 >
                   View Source
                 </MenuItem>
