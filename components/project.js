@@ -1,19 +1,25 @@
 import { Container, useColorModeValue, Center } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 function Project({ children }) {
   return (
-    <Container
-      bg={useColorModeValue("white", "#191919")}
-      maxW="90%"
-      height="md"
-      borderRadius={30}
-      displap="flex"
-      justifyContent="center"
-      alignItems="center"
-      mt={290}
+    <motion.div
+      whileHover={{ y: -20 }}
+      transition={{ ease: "easeOut", duration: 2 }}
     >
-      <Center height="100%">{children}</Center>
-    </Container>
+      <Container
+        bg={useColorModeValue("white", "#191919")}
+        maxW="90%"
+        height="xl"
+        borderRadius={30}
+        displap="flex"
+        justifyContent="center"
+        alignItems="center"
+        mt={20}
+      >
+        <Center height="100%">{children}</Center>
+      </Container>
+    </motion.div>
   );
 }
 export default Project;

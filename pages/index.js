@@ -74,9 +74,10 @@ export default function Home() {
           </Box>
         </Box>
       </Container>
-      <motion.div whileHover={{ scale: 1.1 }}>
-        <Project>ok</Project>
-      </motion.div>
+
+      <Project>Project 1</Project>
+      <Project>Project 2</Project>
+      <Project>Project 3</Project>
     </Layout>
   );
 }
