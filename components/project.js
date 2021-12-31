@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 function Project({ children }) {
   return (
     <motion.div
-      whileHover={{ y: -10, boxShadow: "30px 30px 30px #141414" }}
+      whileHover={{
+        y: -10,
+
+        boxShadow:
+          "7px 7px 10px rgb(161, 117, 235,0.75),15px 15px 15px rgb(160, 233, 255), -7px -7px 10px rgb(237, 202, 133,0.75),-15px -15px 15px rgb(224, 137,188,1)",
+      }}
       transition={{ ease: "easeOut", duration: 0.7 }}
       layout
       style={{
