@@ -74,10 +74,11 @@ export default function Home() {
           </Box>
         </Box>
       </Container>
-
-      <Project>Project 1</Project>
-      <Project>Project 2</Project>
-      <Project>Project 3</Project>
+      <Container centerContent maxW="container.xl">
+        <Project>Project 1</Project>
+        <Project>Project 2</Project>
+        <Project>Project 3</Project>
+      </Container>
     </Layout>
   );
 }
