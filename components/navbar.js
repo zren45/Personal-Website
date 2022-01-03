@@ -59,7 +59,7 @@ const Navbar = (props) => {
         <Flex align="center" mr={5}>
           <NextLink href="/">
             <Heading as="h1" size="lg" cursor="pointer">
-              Zhixiang Ren
+              任志祥 Zhixiang Ren
             </Heading>
           </NextLink>
         </Flex>
