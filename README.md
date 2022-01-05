@@ -2,9 +2,9 @@
 Live Link : https://zhixiangren.vercel.app/
 
 ## Features 📋
-⚡️ Fully Responsive\
-⚡️ Interactive 3D model 
-⚡️ Dark mode available
+⚡️ Fully Responsive<br>
+⚡️ Interactive 3D model<br>
+⚡️ Dark mode available <br>
 ⚡️ Incredibly fast page loading speed
 
 
