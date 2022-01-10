@@ -13,7 +13,7 @@ const Mac = () => {
   const [loading, setLoading] = useState(true);
   const [renderer, setRenderer] = useState();
   const [_camera, setCamera] = useState();
-  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0));
+  const [target] = useState(new THREE.Vector3(0, -0.5, 0));
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
       100 * Math.sin(0.2 * Math.PI),
