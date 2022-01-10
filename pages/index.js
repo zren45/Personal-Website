@@ -5,14 +5,15 @@ import {
   Container,
   Text,
   Img,
-  Flex,
   useColorModeValue,
   Heading,
-  Center,
+  VStack,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Project from "../components/project";
+import thumbRobinhood from "../public/images/robinhood.png";
 
 export default function Home() {
   return (
@@ -74,8 +75,21 @@ export default function Home() {
           </Box>
         </Box>
       </Container>
-      <Container centerContent maxW="container.xl">
-        <Project>Project 1</Project>
+      <Container maxW="container.xl">
+        <Project>
+          <Text fontSize={["sm", "md", "lg", "xl"]}>Web App</Text>
+          <Heading as="h3" fontSize={["md", "lg", "xl", "2xl"]}>
+            Robinhood-Clone
+          </Heading>
+          <Box borderRadius={20} overflow="hidden">
+            <Image
+              src={thumbRobinhood}
+              placeholder="blur"
+              alt="robinhood clone"
+              layout="responsive"
+            />
+          </Box>
+        </Project>
         <Project>Project 2</Project>
         <Project>Project 3</Project>
       </Container>
