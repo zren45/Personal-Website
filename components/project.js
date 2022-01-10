@@ -14,7 +14,7 @@ function Project({ children }) {
       layout
       style={{
         borderRadius: 30,
-        width: "90%",
+        width: "100%",
         marginTop: 100,
       }}
     >
@@ -22,7 +22,7 @@ function Project({ children }) {
         bg={useColorModeValue("white", "#191919")}
         maxW="100%"
         borderRadius={30}
-        p={(50, 100)}
+        p={[30, 50, 100]}
         textAlign={["left", "right"]}
       >
         {children}
