@@ -18,6 +18,7 @@ import thumbRobinhood from "../public/images/robinhood.png";
 export default function Home() {
   return (
     <Layout>
+      {/* // Self - intro section */}
       <Container maxW="100%">
         <Box
           display={{ md: "flex" }}
@@ -54,6 +55,8 @@ export default function Home() {
               A Developer{" "}
             </Heading>
           </Box>
+
+          {/* // profile pic */}
           <Box
             flexShrink={0}
             mt={{ base: 4, md: 0 }}
@@ -75,21 +78,26 @@ export default function Home() {
           </Box>
         </Box>
       </Container>
-      <Container maxW="container.xl">
+
+      {/* project showcase */}
+      <Container maxW="container.xl" centerContent>
         <Project>
           <Text fontSize={["sm", "md", "lg", "xl"]}>Web App</Text>
-          <Heading as="h3" fontSize={["md", "lg", "xl", "2xl"]}>
+          <Heading as="h3" fontSize={["md", "lg", "xl", "2xl"]} mb={3}>
             Robinhood-Clone
           </Heading>
-          <Box borderRadius={20} overflow="hidden">
-            <Image
-              src={thumbRobinhood}
-              placeholder="blur"
-              alt="robinhood clone"
-              layout="responsive"
-            />
-          </Box>
+          <Link href="https://github.com/zren45/Personal-Website">
+            <Box borderRadius={20} overflow="hidden" cursor="pointer">
+              <Image
+                src={thumbRobinhood}
+                placeholder="blur"
+                alt="robinhood clone"
+                layout="responsive"
+              />
+            </Box>
+          </Link>
         </Project>
+
         <Project>Project 2</Project>
         <Project>Project 3</Project>
       </Container>
