@@ -1,5 +1,5 @@
 # Zhixiang Ren's Personal Website 
-Live Link : https://zhixiangren.vercel.app/
+Live Link : https://zhixiangren.com
 
 ## Features 📋
 ⚡️ Fully Responsive<br>
