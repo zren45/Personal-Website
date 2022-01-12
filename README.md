@@ -21,4 +21,4 @@ Live Link : https://zhixiangren.vercel.app/
 - [Three.js](https://threejs.org/) - 3D library for JavaScript
 - [Framer Motion](https://www.framer.com/motion/) - An animation library for React
 ## Credit
-This website is created with the help of this [amazing tutorial](https://www.youtube.com/watch?v=bSMZgXzC9AA&t=4617s) created by [Takuya Matsuyama](https://www.craftz.dog/)
+This website is created with the help of this [amazing tutorial](https://www.youtube.com/watch?v=bSMZgXzC9AA&t=4617s) created by Takuya Matsuyama
