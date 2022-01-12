@@ -22,4 +22,4 @@ Live Link : https://zhixiangren.vercel.app/
 - [Framer Motion](https://www.framer.com/motion/) - An animation library for React
 ## Credit
 * This website is created with the help of this [amazing tutorial](https://www.youtube.com/watch?v=bSMZgXzC9AA&t=4617s) created by Takuya Matsuyama
-* 3D model is "My computer" by [Tobalation](https://sketchfab.com/3d-models/my-computer-ab309ab0cf094372b6f1b26b91c35eca)
+* ["My computer"](https://sketchfab.com/3d-models/my-computer-ab309ab0cf094372b6f1b26b91c35eca) by [Tobalation](https://sketchfab.com/tobalation) is licensed under CC BY 4.0
