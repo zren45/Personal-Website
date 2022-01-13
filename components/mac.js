@@ -66,8 +66,11 @@ const Mac = () => {
       camera.lookAt(target);
       setCamera(camera);
 
-      const light = new THREE.AmbientLight(0xffffff); // soft white light
+      const light = new THREE.DirectionalLight(0xffffff); // soft white light
+      light.position.set(50, 50, 50);
       scene.add(light);
+      const amblight = new THREE.AmbientLight(0x404040, 0.7); // soft white light
+      scene.add(amblight);
 
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
@@ -75,8 +78,8 @@ const Mac = () => {
       setControls(controls);
 
       loadGLTFModel(scene, "/scene.glb", {
-        receiveShadow: false,
-        castShadow: false,
+        receiveShadow: true,
+        castShadow: true,
       }).then(() => {
         animate();
         setLoading(false);
