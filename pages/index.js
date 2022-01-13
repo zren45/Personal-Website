@@ -8,12 +8,14 @@ import {
   useColorModeValue,
   Heading,
   VStack,
+  Link,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
+import NextLink from "next/link";
 import { motion } from "framer-motion";
 import Project from "../components/project";
 import thumbRobinhood from "../public/images/robinhood.png";
+import thumbPersonal from "../public/images/3d.png";
 
 export default function Home() {
   return (
@@ -82,23 +84,55 @@ export default function Home() {
       {/* project showcase */}
       <Container maxW="container.xl" centerContent>
         <Project>
-          <Text fontSize={["sm", "md", "lg", "xl"]}>Web App</Text>
-          <Heading as="h3" fontSize={["md", "lg", "xl", "2xl"]} mb={3}>
+          <Text fontSize={["sm", "md", "lg", "xl"]} mb={{ base: "1", md: "3" }}>
+            Web App
+          </Text>
+          <Heading
+            as="h3"
+            fontSize={["md", "lg", "xl", "2xl"]}
+            mb={{ base: "1", md: "3" }}
+          >
             Robinhood-Clone
           </Heading>
-          <Link href="https://github.com/zren45/Personal-Website">
-            <Box borderRadius={20} overflow="hidden" cursor="pointer">
-              <Image
-                src={thumbRobinhood}
-                placeholder="blur"
-                alt="robinhood clone"
-                layout="responsive"
-              />
-            </Box>
-          </Link>
+          <NextLink href="https://github.com/zren45/Personal-Website" passHref>
+            <Link target="_blank">
+              <Box borderRadius={20} overflow="hidden" cursor="pointer">
+                <Image
+                  src={thumbRobinhood}
+                  placeholder="blur"
+                  alt="robinhood clone"
+                  layout="responsive"
+                />
+              </Box>
+            </Link>
+          </NextLink>
         </Project>
 
-        <Project>Project 2</Project>
+        <Project>
+          <Text fontSize={["sm", "md", "lg", "xl"]} mb={{ base: "1", md: "3" }}>
+            Web Site
+          </Text>
+          <Heading
+            as="h3"
+            fontSize={["md", "lg", "xl", "2xl"]}
+            mb={{ base: "1", md: "3" }}
+          >
+            Personal Website
+          </Heading>
+          <NextLink href="https://github.com/zren45/Personal-Website" passHref>
+            <Link target="_blank">
+              <Box borderRadius={20} overflow="hidden" cursor="pointer">
+                <Image
+                  src={thumbPersonal}
+                  placeholder="blur"
+                  alt="personal website"
+                  layout="responsive"
+                />
+              </Box>
+            </Link>
+          </NextLink>
+        </Project>
+
         <Project>Project 3</Project>
       </Container>
     </Layout>
