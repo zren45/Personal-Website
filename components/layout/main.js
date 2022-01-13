@@ -4,6 +4,7 @@ import { Box, Container } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import NavBar from "../navbar";
 import MacLoader from "../mac-loader";
+import Footer from "../footer";
 
 const LazyMac = dynamic(() => import("../mac"), {
   ssr: false,
@@ -12,7 +13,7 @@ const LazyMac = dynamic(() => import("../mac"), {
 
 export default function Layout({ children, router }) {
   return (
-    <Box>
+    <Box pb={8}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Zhixiang Ren's portfolio" />
@@ -31,6 +32,7 @@ export default function Layout({ children, router }) {
         <LazyMac />
         {children}
       </Container>
+      <Footer />
     </Box>
   );
 }
