@@ -69,7 +69,7 @@ const Navbar = () => {
             p={2}
           >
             <IoLogoGithub></IoLogoGithub>
-            Source
+            Github
           </Link>
         </Stack>
 
