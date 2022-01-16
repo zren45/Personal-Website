@@ -42,7 +42,7 @@ export default function Home() {
               fontWeight="extrabold"
               letterSpacing={-1}
             >
-              Hi, I'm Ren
+              Hi, I'm Ren.
             </Heading>
             <Heading
               bgGradient={useColorModeValue(
@@ -54,7 +54,7 @@ export default function Home() {
               fontSize={{ base: "4xl", md: "6xl" }}
               mt={{ md: 8 }}
             >
-              A Developer{" "}
+              A Developer.{" "}
             </Heading>
           </Box>
 
@@ -66,13 +66,13 @@ export default function Home() {
             align="center"
           >
             <Img
-              src="../images/profile.jpg"
+              src="../images/profile1.jpg"
               borderColor="whiteAlpha.800"
               borderWidth={2}
               borderStyle="solid"
-              maxWidth="100"
-              maxHeight="100"
-              // display="inline-block"
+              maxWidth="150"
+              maxHeight="150"
+              display="inline-block"
               borderRadius="full"
               alt="Profile image"
               m={{ md: "50% 0" }}
