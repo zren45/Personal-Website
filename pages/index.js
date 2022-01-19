@@ -16,6 +16,7 @@ import { motion } from "framer-motion";
 import Project from "../components/project";
 import thumbRobinhood from "../public/images/robinhood.png";
 import thumbPersonal from "../public/images/3d.png";
+import thumbMap from "../public/images/map.png";
 
 export default function Home() {
   return (
@@ -110,7 +111,7 @@ export default function Home() {
 
         <Project>
           <Text fontSize={["sm", "md", "lg", "xl"]} mb={{ base: "1", md: "3" }}>
-            Web Site
+            Web App
           </Text>
           <Heading
             as="h3"
@@ -133,7 +134,30 @@ export default function Home() {
           </NextLink>
         </Project>
 
-        <Project>Project 3</Project>
+        <Project>
+          <Text fontSize={["sm", "md", "lg", "xl"]} mb={{ base: "1", md: "3" }}>
+            Web App
+          </Text>
+          <Heading
+            as="h3"
+            fontSize={["md", "lg", "xl", "2xl"]}
+            mb={{ base: "1", md: "3" }}
+          >
+            Tastemap
+          </Heading>
+          <NextLink href="https://github.com/zren45/Tastemap" passHref>
+            <Link target="_blank">
+              <Box borderRadius={20} overflow="hidden" cursor="pointer">
+                <Image
+                  src={thumbMap}
+                  placeholder="blur"
+                  alt="personal website"
+                  layout="responsive"
+                />
+              </Box>
+            </Link>
+          </NextLink>
+        </Project>
       </Container>
     </Layout>
   );
