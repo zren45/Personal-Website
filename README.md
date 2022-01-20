@@ -9,11 +9,11 @@ Live Link : https://zhixiangren.com
 
 
 ## Sections 📚
-✔️ About me\
-✔️ Projects \
-✔️ Skills \
-✔️ Education\
-✔️ Contact Info
+✔️ Projects\
+✔️ Post \
+✔️ Github \
+✔️ Linkedin 
+
 
 ## Tech Stack
 - [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
