@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Icon } from "@chakra-ui/react";
-import { IoLogoGithub } from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import ThemeToggleButton from "./theme-toggle-button";
 
 const Navbar = () => {
@@ -54,7 +54,7 @@ const Navbar = () => {
           mt={{ base: 4, md: 0 }}
         >
           <NextLink href="/works" passHref>
-            <Link p={2}>Work</Link>
+            <Link p={2}>Pronunciation</Link>
           </NextLink>
 
           <NextLink href="/post" passHref>
@@ -70,6 +70,17 @@ const Navbar = () => {
           >
             <IoLogoGithub></IoLogoGithub>
             Github
+          </Link>
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/in/zhixiangren"
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            p={2}
+          >
+            <IoLogoLinkedin></IoLogoLinkedin>
+            Linkedin
           </Link>
         </Stack>
 
@@ -101,6 +112,13 @@ const Navbar = () => {
                   href="https://github.com/zren45/Personal-Website"
                 >
                   Github
+                </MenuItem>
+                <MenuItem
+                  as={Link}
+                  target="_blank"
+                  href="https://www.linkedin.com/in/zhixiangren"
+                >
+                  Linkedin
                 </MenuItem>
               </MenuList>
             </Menu>
