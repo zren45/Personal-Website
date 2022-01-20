@@ -57,7 +57,7 @@ const Navbar = () => {
             <Link p={2}>Work</Link>
           </NextLink>
 
-          <NextLink href="/posts/first-post" passHref>
+          <NextLink href="/post" passHref>
             <Link p={2}>Post</Link>
           </NextLink>
           <Link
