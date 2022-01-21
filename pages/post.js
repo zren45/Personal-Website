@@ -14,7 +14,10 @@ export default function FirstPost() {
   return (
     <Layout title="Post">
       <Container>
-        <Heading my={6}> In Progress</Heading>
+        <Heading as="h2" my={6}>
+          {" "}
+          In Progress
+        </Heading>
         <Text my={6}>Weeely Task Report and Study Plan</Text>
         <Box my={6} align={"center"}>
           <Link href="/">

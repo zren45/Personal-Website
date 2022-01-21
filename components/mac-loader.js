@@ -18,7 +18,7 @@ export const MacContainer = forwardRef(({ children }, ref) => (
     className="mac"
     m="auto"
     mt={["-20px", "-60px", "-120px"]}
-    mb={["-40px", "-140px", "-200px"]}
+    mb={["-40px", "-140px", "-300px"]}
     w={[280, 480, 680]}
     h={[280, 480, 680]}
     position="relative"
