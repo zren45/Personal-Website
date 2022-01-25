@@ -9,8 +9,12 @@ import {
   Button,
   SimpleGrid,
 } from "@chakra-ui/react";
-
+import sound from "../public/pop.mp3";
 export default function Pronunciation() {
+  const playAudio = () => {
+    const audio = new Audio(sound);
+    audio.play();
+  };
   return (
     <Layout title="pronunciation">
       <Container pb={8}>
@@ -36,6 +40,7 @@ export default function Pronunciation() {
             colorScheme={useColorModeValue("white", "gray.800")}
             variant="outline"
             height={["60px", "80px"]}
+            onClick={playAudio}
           >
             {" "}
             <Text fontSize={["large", "2xl"]}>Zhixiang </Text>
@@ -49,7 +54,7 @@ export default function Pronunciation() {
           </Button>
         </SimpleGrid>
 
-        <Box my={8} align={"center"}>
+        <Box my={6} align={"center"}>
           <Link href="/">
             <Button
               color={useColorModeValue("white", "gray.800")}
