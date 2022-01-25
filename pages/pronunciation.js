@@ -8,15 +8,22 @@ import {
   Box,
   Button,
   SimpleGrid,
+  Center,
 } from "@chakra-ui/react";
-import sound from "../public/pop.mp3";
+import sound from "../public/renzhixiang.mp3";
+import ren from "../public/ren.mp3";
+
 export default function Pronunciation() {
-  const playAudio = () => {
+  const playZhixiang = () => {
     const audio = new Audio(sound);
     audio.play();
   };
+  const playRen = () => {
+    const audio = new Audio(ren);
+    audio.play();
+  };
   return (
-    <Layout title="pronunciation">
+    <Layout title="Pronunciation">
       <Container pb={8}>
         <Heading
           as="h3"
@@ -35,20 +42,22 @@ export default function Pronunciation() {
           This is probably the question I get asked the most. So here's how to
           pronounce my name
         </Text>
-        <SimpleGrid columns={2} spacing={10} mb={20}>
+        <SimpleGrid columns={[1, 3]} spacing={10} mb={20}>
           <Button
             colorScheme={useColorModeValue("white", "gray.800")}
             variant="outline"
             height={["60px", "80px"]}
-            onClick={playAudio}
+            onClick={playZhixiang}
           >
             {" "}
-            <Text fontSize={["large", "2xl"]}>Zhixiang </Text>
+            <Text fontSize={["large", "2xl"]}>Zhixiang Ren</Text>
           </Button>
+          <Center>But you can call me </Center>
           <Button
             colorScheme={useColorModeValue("white", "gray.800")}
             variant="outline"
             height={["60px", "80px"]}
+            onClick={playRen}
           >
             <Text fontSize={["large", "2xl"]}> Ren</Text>
           </Button>
