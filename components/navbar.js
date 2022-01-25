@@ -101,7 +101,7 @@ const Navbar = () => {
                   <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
                 <NextLink href="/pronunciation" passHref>
-                  <MenuItem as={Link}>pronunciation</MenuItem>
+                  <MenuItem as={Link}>Pronunciation</MenuItem>
                 </NextLink>
                 <NextLink href="/post" passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
