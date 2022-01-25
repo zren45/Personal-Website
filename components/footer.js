@@ -6,10 +6,10 @@ const Footer = () => {
       align="center"
       opacity={0.4}
       fontSize="sm"
-      my={6}
       position={"absolute"}
       bottom={0}
       width={"100%"}
+      height={"2.5rem"}
     >
       &copy; {new Date().getFullYear()} Zhixiang Ren. All Rights Reserved.
     </Box>

@@ -28,7 +28,7 @@ export default function Layout({ children, router }) {
       <NavBar path={router} />
       {/*   */}
 
-      <Container maxW="container.lg" pt={14}>
+      <Container maxW="container.lg" pt={14} pb={20}>
         <LazyMac />
         {children}
       </Container>
