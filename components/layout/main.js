@@ -13,7 +13,7 @@ const LazyMac = dynamic(() => import("../mac"), {
 
 export default function Layout({ children, router }) {
   return (
-    <Box pb={8}>
+    <Box pb={8} minH={"100vh"}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Zhixiang Ren's portfolio" />
