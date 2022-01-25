@@ -1,5 +1,14 @@
 import Layout from "../components/layout/article";
-import { Container, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import Link from "next/link";
+import {
+  Container,
+  Heading,
+  Text,
+  useColorModeValue,
+  Box,
+  Button,
+  SimpleGrid,
+} from "@chakra-ui/react";
 
 export default function Pronunciation() {
   return (
@@ -13,15 +22,43 @@ export default function Pronunciation() {
             "linear(to-l, #a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%)"
           )}
           bgClip="text"
+          maxW={"100%"}
         >
-          {" "}
-          How do you pronounce your name ?{" "}
+          How do you <br></br>
+          pronounce your name
         </Heading>
-        <Text fontSize="lg">
-          This is probably the quesion i get asked the most.
-          <br />
-          So here's how I pronounce my name
+        <Text fontSize="lg" mb={8}>
+          This is probably the question I get asked the most. So here's how to
+          pronounce my name
         </Text>
+        <SimpleGrid columns={2} spacing={10} mb={20}>
+          <Button
+            colorScheme={useColorModeValue("white", "gray.800")}
+            variant="outline"
+            height={["60px", "80px"]}
+          >
+            {" "}
+            <Text fontSize={["large", "2xl"]}>Zhixiang </Text>
+          </Button>
+          <Button
+            colorScheme={useColorModeValue("white", "gray.800")}
+            variant="outline"
+            height={["60px", "80px"]}
+          >
+            <Text fontSize={["large", "2xl"]}> Ren</Text>
+          </Button>
+        </SimpleGrid>
+
+        <Box my={8} align={"center"}>
+          <Link href="/">
+            <Button
+              color={useColorModeValue("white", "gray.800")}
+              bg={useColorModeValue("purple.900", "orange.100")}
+            >
+              Return to home
+            </Button>
+          </Link>
+        </Box>
       </Container>
     </Layout>
   );
