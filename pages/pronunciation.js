@@ -50,7 +50,7 @@ export default function Pronunciation() {
             onClick={playZhixiang}
           >
             {" "}
-            <Text fontSize={["large", "2xl"]}>Zhixiang Ren</Text>
+            <Text fontSize={["large", "xl"]}>Zhixiang Ren</Text>
           </Button>
           <Center>But you can call me </Center>
           <Button
