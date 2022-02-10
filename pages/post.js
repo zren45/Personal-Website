@@ -18,7 +18,7 @@ export default function FirstPost() {
           {" "}
           In Progress
         </Heading>
-        <Text my={6}>Weely Task Report and Study Plan</Text>
+        <Text my={6}>Weekly Task Report and Study Plan</Text>
         <Box my={6} align={"center"}>
           <Link href="/">
             <Button
