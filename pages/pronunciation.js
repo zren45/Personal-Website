@@ -10,6 +10,7 @@ import {
   SimpleGrid,
   Center,
 } from "@chakra-ui/react";
+import { AiFillSound } from "react-icons/ai";
 import sound from "../public/renzhixiang.mp3";
 import ren from "../public/ren.mp3";
 
@@ -24,40 +25,46 @@ export default function Pronunciation() {
   };
   return (
     <Layout title="Pronunciation">
-      <Container pb={8}>
+      <Container pb={8} maxW="container.lg" centerContent>
         <Heading
           as="h3"
-          mb={8}
+          mb={[8, 20]}
+          ml={[null, 16]}
           bgGradient={useColorModeValue(
             "linear(to-l,#18c9ff 30%,#8627f1 50%,#f91f63 70%,#ffb420 94%)",
             "linear(to-l, #a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%)"
           )}
           bgClip="text"
           maxW={"100%"}
+          fontSize={{ base: "48", md: "7xl" }}
+          textAlign={"left"}
         >
-          How do you <br></br>
-          pronounce your name
+          How do you pronounce your name ?
         </Heading>
-        <Text fontSize="lg" mb={8}>
+        <Text fontSize="xl" mb={[8, 20]}>
           This is probably the question I get asked the most. So here's how to
           pronounce my name
         </Text>
-        <SimpleGrid columns={[1, 3]} spacing={10} mb={20}>
+
+        <SimpleGrid columns={[1, null, 3]} spacing={10} mb={20}>
           <Button
             colorScheme={useColorModeValue("white", "gray.800")}
             variant="outline"
-            height={["60px", "80px"]}
             onClick={playZhixiang}
+            leftIcon={<AiFillSound />}
           >
             {" "}
             <Text fontSize={["large", "xl"]}>Zhixiang Ren</Text>
           </Button>
-          <Center>But you can call me </Center>
+          <Center>
+            I know it's hard 🤣 <br />
+            so I usually go by{" "}
+          </Center>
           <Button
             colorScheme={useColorModeValue("white", "gray.800")}
-            variant="outline"
-            height={["60px", "80px"]}
             onClick={playRen}
+            variant={"outline"}
+            leftIcon={<AiFillSound />}
           >
             <Text fontSize={["large", "2xl"]}> Ren</Text>
           </Button>
