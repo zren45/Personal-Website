@@ -8,17 +8,54 @@ import {
   useColorModeValue,
   Box,
   Container,
+  UnorderedList,
+  ListItem,
+  Center,
 } from "@chakra-ui/react";
+import { getSortedPostsData } from "../lib/posts";
 
-export default function FirstPost() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function FirstPost({ allPostsData }) {
   return (
     <Layout title="Post">
-      <Container>
-        <Heading as="h2" my={6}>
-          {" "}
-          In Progress
+      <Container maxW="100%">
+        <Heading
+          as="h3"
+          display={"inline-block"}
+          mb={[8, 20]}
+          ml={[null, 16]}
+          bgGradient={useColorModeValue(
+            "linear(to-l,#18c9ff 30%,#8627f1 50%,#f91f63 70%,#ffb420 94%)",
+            "linear(to-l, #a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%)"
+          )}
+          bgClip="text"
+          fontSize={{ base: "48", md: "7xl" }}
+          textAlign={"left"}
+        >
+          Posts
         </Heading>
-        <Text my={6}>Weekly Task Report and Study Plan</Text>
+        <Center>
+          <UnorderedList spacing={6}>
+            {allPostsData.map(({ id, date, title }) => (
+              <ListItem key={id}>
+                {title}
+                <br />
+                {id}
+                <br />
+                {date}
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Center>
+
         <Box my={6} align={"center"}>
           <Link href="/">
             <Button
