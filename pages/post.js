@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Head from "next/head";
 import Layout from "../components/layout/article";
 import {
@@ -11,6 +10,7 @@ import {
   UnorderedList,
   ListItem,
   Center,
+  Link,
 } from "@chakra-ui/react";
 import { getSortedPostsData } from "../lib/posts";
 
@@ -46,7 +46,12 @@ export default function FirstPost({ allPostsData }) {
           <UnorderedList spacing={6}>
             {allPostsData.map(({ id, date, title }) => (
               <ListItem key={id}>
-                {title}
+                <Link
+                  color={useColorModeValue("purple.900", "orange.100")}
+                  href={`/posts/${id}`}
+                >
+                  {title}
+                </Link>
                 <br />
                 {id}
                 <br />

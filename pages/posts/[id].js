@@ -51,20 +51,15 @@ export default function Post({ postData }) {
 
       <Container maxW="100%">
         <Date dateString={postData.date} />
-
-        <Text
-          fontSize="xl"
-          mb={[8, 20]}
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        />
+        <Box dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </Container>
       <Box my={6} align={"center"}>
-        <Link href="/">
+        <Link href="/post">
           <Button
             color={useColorModeValue("white", "gray.800")}
             bg={useColorModeValue("purple.900", "orange.100")}
           >
-            Return to home
+            Return to post
           </Button>
         </Link>
       </Box>
