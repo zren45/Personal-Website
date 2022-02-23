@@ -95,7 +95,7 @@ export default function Home() {
           >
             Robinhood-Clone
           </Heading>
-          <NextLink href="https://github.com/zren45/Personal-Website" passHref>
+          <NextLink href="https://github.com/zren45/Robinhood-Clone" passHref>
             <Link target="_blank">
               <Box borderRadius={20} overflow="hidden" cursor="pointer">
                 <Image
