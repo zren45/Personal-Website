@@ -53,8 +53,7 @@ export default function FirstPost({ allPostsData }) {
                   {title}
                 </Link>
                 <br />
-                {id}
-                <br />
+
                 {date}
               </ListItem>
             ))}

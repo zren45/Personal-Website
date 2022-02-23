@@ -13,6 +13,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
+
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
   return {
@@ -51,7 +52,7 @@ export default function Post({ postData }) {
 
       <Container maxW="100%">
         <Date dateString={postData.date} />
-        <Box dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
       </Container>
       <Box my={6} align={"center"}>
         <Link href="/post">
