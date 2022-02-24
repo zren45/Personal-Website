@@ -40,7 +40,7 @@ export default function FirstPost({ allPostsData }) {
           fontSize={{ base: "48", md: "7xl" }}
           textAlign={"left"}
         >
-          Posts
+          Posts (Testing)
         </Heading>
         <Center>
           <Text fontSize={["lg", "xl"]}>
