@@ -43,24 +43,26 @@ export default function FirstPost({ allPostsData }) {
           Posts
         </Heading>
         <Center>
-          <UnorderedList spacing={6}>
-            {allPostsData.map(({ id, date, title }) => (
-              <ListItem key={id}>
-                <Link
-                  color={useColorModeValue("purple.900", "orange.100")}
-                  href={`/posts/${id}`}
-                >
-                  {title}
-                </Link>
-                <br />
+          <Text fontSize={["lg", "xl"]}>
+            <UnorderedList spacing={6}>
+              {allPostsData.map(({ id, date, title }) => (
+                <ListItem key={id}>
+                  <Link
+                    color={useColorModeValue("purple.900", "orange.100")}
+                    href={`/posts/${id}`}
+                  >
+                    {title}
+                  </Link>
+                  <br />
 
-                {date}
-              </ListItem>
-            ))}
-          </UnorderedList>
+                  {date}
+                </ListItem>
+              ))}
+            </UnorderedList>
+          </Text>
         </Center>
 
-        <Box my={6} align={"center"}>
+        <Box mt={20} align={"center"}>
           <Link href="/">
             <Button
               color={useColorModeValue("white", "gray.800")}

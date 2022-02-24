@@ -34,27 +34,29 @@ export async function getStaticPaths() {
 export default function Post({ postData }) {
   return (
     <Layout title={postData.id}>
-      <Heading
-        as="h3"
-        display={"inline-block"}
-        mb={[8, 20]}
-        ml={[null, 16]}
-        bgGradient={useColorModeValue(
-          "linear(to-l,#18c9ff 30%,#8627f1 50%,#f91f63 70%,#ffb420 94%)",
-          "linear(to-l, #a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%)"
-        )}
-        bgClip="text"
-        fontSize={{ base: "48", md: "7xl" }}
-        textAlign={"left"}
-      >
-        {postData.title}
-      </Heading>
-
-      <Container maxW="100%">
-        <Date dateString={postData.date} />
+      <Container maxW={"100%"}>
+        <Heading
+          as="h3"
+          display={"inline-block"}
+          mb={[8, 20]}
+          bgGradient={useColorModeValue(
+            "linear(to-l,#18c9ff 30%,#8627f1 50%,#f91f63 70%,#ffb420 94%)",
+            "linear(to-l, #a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%)"
+          )}
+          bgClip="text"
+          fontSize={{ base: "2xl", md: "6xl" }}
+          textAlign={"left"}
+        >
+          {postData.title}
+        </Heading>
+      </Container>
+      <Container>
+        <Text color={"gray.400"}>
+          <Date dateString={postData.date} />
+        </Text>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
       </Container>
-      <Box my={6} align={"center"}>
+      <Box mt={20} align={"center"}>
         <Link href="/post">
           <Button
             color={useColorModeValue("white", "gray.800")}
