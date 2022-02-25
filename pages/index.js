@@ -89,7 +89,6 @@ export default function Home() {
             Web App
           </Text>
           <Heading
-            as="h3"
             fontSize={["md", "lg", "xl", "2xl"]}
             mb={{ base: "1", md: "3" }}
           >
@@ -114,7 +113,6 @@ export default function Home() {
             Web App
           </Text>
           <Heading
-            as="h3"
             fontSize={["md", "lg", "xl", "2xl"]}
             mb={{ base: "1", md: "3" }}
           >
@@ -139,7 +137,6 @@ export default function Home() {
             Web App
           </Text>
           <Heading
-            as="h3"
             fontSize={["md", "lg", "xl", "2xl"]}
             mb={{ base: "1", md: "3" }}
           >
