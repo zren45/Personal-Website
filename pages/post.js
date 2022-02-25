@@ -13,6 +13,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { getSortedPostsData } from "../lib/posts";
+import Date from "../components/date";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -44,7 +45,7 @@ export default function FirstPost({ allPostsData }) {
         </Heading>
         <Center>
           <Text fontSize={["lg", "xl"]}>
-            <UnorderedList spacing={6}>
+            <UnorderedList>
               {allPostsData.map(({ id, date, title }) => (
                 <ListItem key={id}>
                   <Link
@@ -54,8 +55,7 @@ export default function FirstPost({ allPostsData }) {
                     {title}
                   </Link>
                   <br />
-
-                  {date}
+                  <Date dateString={date} />
                 </ListItem>
               ))}
             </UnorderedList>
