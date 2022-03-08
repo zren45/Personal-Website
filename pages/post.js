@@ -54,8 +54,10 @@ export default function FirstPost({ allPostsData }) {
                   >
                     {title}
                   </Link>
-                  <br />
-                  <Date dateString={date} />
+
+                  <Text fontSize="md" my={"0"}>
+                    <Date dateString={date} />
+                  </Text>
                 </ListItem>
               ))}
             </UnorderedList>
