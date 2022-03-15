@@ -156,10 +156,12 @@ export default function Home() {
           </NextLink>
         </Project>
       </Container>
-      <Container centerContent pt={10}>
-        <a href="https://clustrmaps.com/site/1bncl" title="Visit tracker">
-          <img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=l3opdF00HHTtye7wf8s1DZWNtF3fgINcSuERpzkyDu8&co=191919&ct=ffffff" />
-        </a>
+      <Container maxW="150px" pt={10} centerContent>
+        <script
+          type="text/javascript"
+          id="clstr_globe"
+          src="//clustrmaps.com/globe.js?d=l3opdF00HHTtye7wf8s1DZWNtF3fgINcSuERpzkyDu8"
+        ></script>
       </Container>
     </Layout>
   );
