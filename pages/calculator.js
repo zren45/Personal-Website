@@ -35,8 +35,11 @@ return (
 <Layout title={'Mint Calculator'}>
 <Container>
     Mint Calculator
-    {gstPrice}
-    {solPrice}
+    <Text>GST Price is {gstPrice}</Text>
+
+    <Text>Solana Price is {solPrice}</Text>
+    
+
 </Container>
 
 </Layout>
