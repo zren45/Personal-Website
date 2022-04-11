@@ -6,14 +6,24 @@ import {
     useColorModeValue,
     Box,
     Button,
-  
     Center,
+    Input,
+    InputLeftAddon,
+    InputRightAddon,
+    Stack,
+    InputGroup
   } from "@chakra-ui/react";
 import { useEffect,useState } from "react";
+import App from "next/app";
 
 export default function mintCalculator(){
 const [gstPrice, setGst] = useState();
 const [solPrice, setSol] = useState();
+const handleChange = (event) => setValue(event.target.value);
+const gstChange = (event) => setGst(event.target.value);
+const [value, setValue] = useState('');
+let profit = value*0.94 - (gstPrice/solPrice*220)
+profit = profit.toFixed(4)
 
 useEffect(() => {
     fetch("https://api.coingecko.com/api/v3/simple/price?ids=solana,green-satoshi-token&vs_currencies=usd")
@@ -34,11 +44,28 @@ return (
 
 <Layout title={'Mint Calculator'}>
 <Container>
-    Mint Calculator
-    <Text>GST Price is {gstPrice}</Text>
+    <Text>Mint Calculator</Text>
+    <Stack spacing={4}>
+  <InputGroup>
+    <InputLeftAddon children='GST price' />
+    <Input type='number' placeholder= {'$' + gstPrice} onChange={gstChange}/>
+  </InputGroup>
 
-    <Text>Solana Price is {solPrice}</Text>
+  {/* If you add the size prop to `InputGroup`, it'll pass it to all its children. */}
+  <InputGroup >
+    <InputLeftAddon children='Solana Price' />
+    <Input placeholder={'$' + solPrice} />
     
+  </InputGroup>
+  <InputGroup >
+ 
+    <InputLeftAddon children='NFT Floor Price' />
+    <Input value={value} onChange={handleChange} placeholder={'◎' + 'check in Stepn app'}/>
+    
+  </InputGroup>
+</Stack>
+
+    <Text> Profit to mint is {profit} Sol.  <br />{(profit*solPrice).toFixed(4)} USD. <br /> {(solPrice/gstPrice).toFixed(4)} GST</Text>
 
 </Container>
 
