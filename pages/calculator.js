@@ -44,7 +44,7 @@ return (
 
 <Layout title={'Mint Calculator'}>
 <Container>
-    <Text>Mint Calculator</Text>
+    <Text>Stepn Mint Profit Calculator</Text>
     <Stack spacing={4}>
   <InputGroup>
     <InputLeftAddon children='GST price' />
