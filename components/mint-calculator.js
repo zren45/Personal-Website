@@ -85,7 +85,7 @@ const MintCalculator = () => {
         {" "}
         Profit to mint is {profit} Sol. <br />
         {(profit * solPrice).toFixed(4)} USD. <br />{" "}
-        {(solPrice / gstPrice).toFixed(4)} GST
+        {((profit * solPrice) / gstPrice).toFixed(4)} GST
       </Text>
     </Container>
   );
