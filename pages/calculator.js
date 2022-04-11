@@ -67,7 +67,8 @@ return (
   <InputGroup >
  
     <InputLeftAddon children='NFT Floor Price' />
-    <Input type='number' value={value} onChange={handleChange} placeholder={'◎' + 'check in Stepn app'} onKeyPress={(event) => {
+    <Input  isInvalid
+    errorBorderColor="green.300" type='number' value={value} onChange={handleChange} placeholder={'◎' + 'check in Stepn app'} onKeyPress={(event) => {
         if (!/[0-9]|./.test(event.key)) {
           event.preventDefault();
         }
