@@ -11,21 +11,25 @@ import { useEffect, useState } from "react";
 const MintCalculator = () => {
   const [gstPrice, setGst] = useState();
   const [solPrice, setSol] = useState();
+  const [gmtPrice, setGmt] = useState();
   const handleChange = (event) => setValue(event.target.value);
   const gstChange = (event) => setGst(event.target.value);
+  const gmtChange = (event) => setGmt(event.target.value);
   const [value, setValue] = useState("");
-  let profit = value * 0.94 - (gstPrice / solPrice) * 220;
+  let profit =
+    value * 0.94 - (gstPrice / solPrice) * 220 - (gmtPrice / solPrice) * 20;
   profit = profit.toFixed(4);
 
   useEffect(() => {
     fetch(
-      "https://api.coingecko.com/api/v3/simple/price?ids=solana,green-satoshi-token&vs_currencies=usd"
+      "https://api.coingecko.com/api/v3/simple/price?ids=solana,green-satoshi-token,stepn&vs_currencies=usd"
     )
       .then((res) => res.json())
       .then(
         (data) => {
           setGst(data["green-satoshi-token"].usd);
           setSol(data.solana.usd);
+          setGmt(data.stepn.usd);
         },
         (error) => {
           setIsLoaded(true);
@@ -56,6 +60,20 @@ const MintCalculator = () => {
           <InputLeftAddon children="Solana Price" />
           <Input
             placeholder={"$" + solPrice}
+            type="number"
+            onKeyPress={(event) => {
+              if (!/[0-9]|./.test(event.key)) {
+                event.preventDefault();
+              }
+            }}
+          />
+        </InputGroup>
+        <InputGroup>
+          <InputLeftAddon children="GMT Price" />
+          <Input
+            placeholder={"$" + gmtPrice}
+            type="number"
+            onChange={gmtChange}
             onKeyPress={(event) => {
               if (!/[0-9]|./.test(event.key)) {
                 event.preventDefault();
@@ -84,8 +102,10 @@ const MintCalculator = () => {
       <Text>
         {" "}
         Profit to mint is {profit} Sol. <br />
-        {(profit * solPrice).toFixed(4)} USD. <br />{" "}
+        or {(profit * solPrice).toFixed(4)} USD. <br /> or{" "}
         {((profit * solPrice) / gstPrice).toFixed(4)} GST
+        <br />
+        or {((profit * solPrice) / gmtPrice).toFixed(4)} GMT
       </Text>
     </Container>
   );
