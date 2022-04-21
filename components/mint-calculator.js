@@ -1,10 +1,10 @@
 import {
   Container,
-  Text,
   Input,
+  InputGroup,
   InputLeftAddon,
   Stack,
-  InputGroup,
+  Text,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 

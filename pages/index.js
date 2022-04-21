@@ -1,22 +1,19 @@
-import Head from "next/head";
-import Layout from "../components/layout/article";
 import {
   Box,
   Container,
-  Text,
-  Img,
-  useColorModeValue,
   Heading,
-  VStack,
+  Img,
   Link,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
-import { motion } from "framer-motion";
+import Layout from "../components/layout/article";
 import Project from "../components/project";
-import thumbRobinhood from "../public/images/robinhood.png";
 import thumbPersonal from "../public/images/3d.png";
 import thumbMap from "../public/images/map.png";
+import thumbRobinhood from "../public/images/robinhood.png";
 
 export default function Home() {
   return (

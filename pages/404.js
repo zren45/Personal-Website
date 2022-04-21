@@ -1,13 +1,13 @@
-import NextLink from "next/link";
 import {
   Box,
-  Heading,
-  Text,
+  Button,
   Container,
   Divider,
-  Button,
+  Heading,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 const NotFound = () => {
   return (

@@ -1,10 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Box, Container } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
-import NavBar from "../navbar";
-import MacLoader from "../mac-loader";
+import Head from "next/head";
 import Footer from "../footer";
+import MacLoader from "../mac-loader";
+import NavBar from "../navbar";
 
 const LazyMac = dynamic(() => import("../mac"), {
   ssr: false,

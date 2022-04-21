@@ -1,21 +1,20 @@
 // import Logo from "./logo";
-import NextLink from "next/link";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import {
-  Container,
   Box,
-  Link,
-  Stack,
-  Heading,
+  Container,
   Flex,
+  Heading,
+  IconButton,
+  Link,
   Menu,
+  MenuButton,
   MenuItem,
   MenuList,
-  MenuButton,
-  IconButton,
+  Stack,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { Icon } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import ThemeToggleButton from "./theme-toggle-button";
 

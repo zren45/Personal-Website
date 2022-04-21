@@ -1,18 +1,15 @@
-import Layout from "../../components/layout/article";
-import { getAllPostIds, getPostData } from "../../lib/posts";
-import Date from "../../components/date";
 import {
+  Box,
+  Button,
+  Container,
   Heading,
   Text,
-  Button,
   useColorModeValue,
-  Box,
-  Container,
-  UnorderedList,
-  ListItem,
-  Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import Date from "../../components/date";
+import Layout from "../../components/layout/article";
+import { getAllPostIds, getPostData } from "../../lib/posts";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);

@@ -1,18 +1,18 @@
-import Layout from "../components/layout/article";
-import Link from "next/link";
 import {
-  Container,
-  Heading,
-  Text,
-  useColorModeValue,
   Box,
   Button,
-  SimpleGrid,
   Center,
+  Container,
+  Heading,
+  SimpleGrid,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { AiFillSound } from "react-icons/ai";
-import sound from "../public/renzhixiang.mp3";
+import Layout from "../components/layout/article";
 import ren from "../public/ren.mp3";
+import sound from "../public/renzhixiang.mp3";
 
 export default function Pronunciation() {
   const playZhixiang = () => {

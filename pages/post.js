@@ -1,18 +1,18 @@
-import Layout from "../components/layout/article";
 import {
-  Heading,
-  Text,
-  Button,
-  useColorModeValue,
   Box,
-  Container,
-  UnorderedList,
-  ListItem,
+  Button,
   Center,
+  Container,
+  Heading,
   Link,
+  ListItem,
+  Text,
+  UnorderedList,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { getSortedPostsData } from "../lib/posts";
 import Date from "../components/date";
+import Layout from "../components/layout/article";
+import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
