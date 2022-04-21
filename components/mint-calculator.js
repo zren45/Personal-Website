@@ -9,6 +9,8 @@ import {
 import { useEffect, useState } from "react";
 
 const MintCalculator = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [err, setError] = useState(null);
   const [gstPrice, setGst] = useState();
   const [solPrice, setSol] = useState();
   const [gmtPrice, setGmt] = useState();
