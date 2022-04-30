@@ -19,7 +19,7 @@ const MintCalculator = () => {
   const gmtChange = (event) => setGmt(event.target.value);
   const [value, setValue] = useState("");
   let profit =
-    value * 0.94 - (gstPrice / solPrice) * 100 - (gmtPrice / solPrice) * 130;
+    value * 0.94 - (gstPrice / solPrice) * 120 - (gmtPrice / solPrice) * 110;
   profit = profit.toFixed(4);
 
   useEffect(() => {
