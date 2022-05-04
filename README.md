@@ -1,5 +1,9 @@
-# Zhixiang Ren's Personal Website 
-Live Link : https://zhixiangren.com
+
+
+<div align="center">
+  <h1><a href="https://zhixiangren.com" target="_blank">Zhixiangren.com</a></h1>
+  My personal portfolio website to show my skills, experience, and blogs I published
+</div>
 
 ## Features 📋
 ⚡️ Fully Responsive<br>
