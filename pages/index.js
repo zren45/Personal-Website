@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
+import { ChakraNextImage } from "../components/chakra-next-image";
+
 import Layout from "../components/layout/article";
 import Project from "../components/project";
 import thumbPersonal from "../public/images/3d.png";
