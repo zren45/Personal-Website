@@ -20,7 +20,7 @@ export default function Layout({ children, router }) {
 
         <meta property="og:site_name" content="Zhixiang Ren's Homepage" />
         <meta property="og:type" content="website" />
-
+        <link rel="canonical" href="https://www.zhixiangren.com/" />
         <title>Zhixiang Ren - Homepage</title>
       </Head>
 
