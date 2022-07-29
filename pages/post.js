@@ -47,12 +47,7 @@ export default function FirstPost({ allPostsData }) {
             <UnorderedList>
               {allPostsData.map(({ id, date, title }) => (
                 <ListItem key={id}>
-                  <Link
-                    color={useColorModeValue("purple.900", "orange.100")}
-                    href={`/posts/${id}`}
-                  >
-                    {title}
-                  </Link>
+                  <Link href={`/posts/${id}`}>{title}</Link>
 
                   <Text fontSize="md" my={"0"}>
                     <Date dateString={date} />
@@ -67,7 +62,7 @@ export default function FirstPost({ allPostsData }) {
           <Link href="/">
             <Button
               color={useColorModeValue("white", "gray.800")}
-              bg={useColorModeValue("purple.900", "orange.100")}
+              bg={useColorModeValue("purple.900", "gray.50")}
             >
               Return to home
             </Button>

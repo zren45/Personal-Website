@@ -17,7 +17,7 @@ const ThemeToggleButton = () => {
       >
         <IconButton
           aria-label="Toggle theme"
-          bg={useColorModeValue("purple.900", "orange.100")}
+          bg={useColorModeValue("purple.900", "gray.100")}
           icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
           onClick={toggleColorMode}
           color={useColorModeValue("white", "gray.800")}
