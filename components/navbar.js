@@ -24,8 +24,8 @@ const Navbar = () => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue("orange.50", "#20202380")}
-      css={{ backdropFilter: "blur(10px)" }}
+      backdropFilter="auto"
+      backdropBlur="10px"
       zIndex={999}
     >
       <Container
