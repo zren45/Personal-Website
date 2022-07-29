@@ -28,7 +28,7 @@ export default function FirstPost({ allPostsData }) {
     <Layout title="Post">
       <Container maxW="100%">
         <Heading
-          as="h3"
+          as="h1"
           display={"inline-block"}
           mb={[8, 20]}
           ml={[null, 16]}
