@@ -11,7 +11,7 @@ const Footer = () => {
       width={"100%"}
       height={"2.5rem"}
     >
-      &copy; {new Date().getFullYear()} Zhixiang Ren. All Rights Reserved.
+      &copy; {new Date().getFullYear()} Zhixiang Ren.
     </Box>
   );
 };
