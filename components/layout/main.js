@@ -28,7 +28,6 @@ export default function Layout({ children, router }) {
       {/*   */}
 
       <Container maxW="container.lg" pt={14} pb={10}>
-        <LazyMac />
         {children}
       </Container>
 
