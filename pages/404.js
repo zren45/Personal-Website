@@ -11,9 +11,17 @@ import NextLink from "next/link";
 
 const NotFound = () => {
   return (
-    <Container zIndex={99} position="relative" mt={15} maxW="60ch">
-      <Heading as="h1">Not found</Heading>
-      <Text>The page you&apos;re looking for was not found.</Text>
+    <Container
+      zIndex={99}
+      position="relative"
+      mt={15}
+      maxW="60ch"
+      centerContent
+      pt="16"
+    >
+      <Heading as="h1">404 Not Found</Heading>
+      <Text>Oh no. You just got lost</Text>
+      <Text> The page you&apos;re looking for was not found.</Text>
       <Divider my={6} />
 
       <Box mt={20} align="center">
