@@ -33,7 +33,7 @@ export default function Post({ postData }) {
     <Layout title={postData.id}>
       <Container maxW={"100%"}>
         <Heading
-          as="h3"
+          as="h1"
           display={"inline-block"}
           mb={[8, 20]}
           bgGradient={useColorModeValue(
