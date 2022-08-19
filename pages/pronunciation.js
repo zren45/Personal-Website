@@ -27,7 +27,7 @@ export default function Pronunciation() {
     <Layout title="Pronunciation">
       <Container pb={8} maxW="container.lg" centerContent>
         <Heading
-          as="h3"
+          as="h1"
           mb={[8, 20]}
           ml={[null, 16]}
           bgGradient={useColorModeValue(
