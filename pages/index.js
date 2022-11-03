@@ -11,6 +11,7 @@ import {
 import { ChakraNextImage } from "../components/chakra-next-image";
 import ProjectSection from "../components/project-section";
 import Layout from "../components/layout/article";
+import NextLink from "next/link";
 
 export default function Home() {
   return (
@@ -53,7 +54,10 @@ export default function Home() {
               letterSpacing="tighter"
             >
               Hi <br></br>
-              I&apos;m Ren.
+              I&apos;m{" "}
+              <NextLink href="/pronunciation" passHref>
+                <Link>Ren.</Link>
+              </NextLink>
             </Heading>
             <Heading
               bgGradient={useColorModeValue(
