@@ -11,16 +11,14 @@ import {
 import Link from "next/link";
 import { AiFillSound } from "react-icons/ai";
 import Layout from "../components/layout/article";
-import ren from "../public/ren.mp3";
-import sound from "../public/renzhixiang.mp3";
 
 export default function Pronunciation() {
   const playZhixiang = () => {
-    const audio = new Audio(sound);
+    const audio = new Audio("/renzhixiang.mp3");
     audio.play();
   };
   const playRen = () => {
-    const audio = new Audio(ren);
+    const audio = new Audio("/ren.mp3");
     audio.play();
   };
   return (
