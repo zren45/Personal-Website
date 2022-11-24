@@ -24,6 +24,11 @@ export default class Document extends NextDocument {
           `,
             }}
           />
+          {/* syntax highlighting */}
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark-reasonable.min.css"
+          />
         </Head>
 
         <body>
