@@ -72,7 +72,7 @@ export default function Pronunciation() {
           <Link href="/">
             <Button
               color={useColorModeValue("white", "gray.800")}
-              bg={useColorModeValue("purple.900", "orange.100")}
+              bg={useColorModeValue("purple.900", "gray.50")}
             >
               Return to home
             </Button>
