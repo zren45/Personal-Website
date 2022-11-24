@@ -4,7 +4,7 @@ import NextImage from "next/image";
 export const ChakraNextImage = (props) => {
   const { src, alt, ...rest } = props;
   return (
-    <Box position="relative" {...rest}>
+    <Box position="relative" overflow={"hidden"} {...rest}>
       <NextImage layout="fill" src={src} alt={alt} />
     </Box>
   );
