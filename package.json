@@ -13,8 +13,6 @@
     "@mdx-js/loader": "^2.0.0-rc.2",
     "@mdx-js/react": "^2.0.0-rc.2",
     "@next/mdx": "^13.0.4",
-    "@reach/disclosure": "^0.18.0",
-    "@reach/tooltip": "^0.18.0",
     "date-fns": "^2.28.0",
     "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.3",
@@ -24,7 +22,6 @@
     "react-icons": "^4.3.1",
     "rehype-highlight": "^6.0.0",
     "remark": "^14.0.2",
-    "remark-frontmatter": "^4.0.1",
     "remark-html": "^15.0.1",
     "three": "^0.136.0"
   },
