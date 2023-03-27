@@ -9,21 +9,43 @@ import {
   Text,
   UnorderedList,
   useColorModeValue,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Stack,
+  Image,
+  SimpleGrid,
 } from "@chakra-ui/react";
-import Date from "../components/date";
-import Layout from "../components/layout/article";
-import { getSortedPostsData } from "../lib/posts";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+import {} from "@chakra-ui/react";
+
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+import Layout from "../components/layout/article";
+
+export const getStaticProps = async () => {
+  const files = fs.readdirSync(path.join("posts"));
+  const posts = files.map((filename) => {
+    const markdownWithMeta = fs.readFileSync(
+      path.join("posts", filename),
+      "utf-8"
+    );
+    const { data: frontMatter } = matter(markdownWithMeta);
+    return {
+      frontMatter,
+      slug: filename.split(".")[0],
+    };
+  });
   return {
     props: {
-      allPostsData,
+      posts,
     },
   };
-}
-
-export default function FirstPost({ allPostsData }) {
+};
+export default function FirstPost({ posts }) {
   return (
     <Layout title="Post">
       <Container maxW="100%">
@@ -42,22 +64,34 @@ export default function FirstPost({ allPostsData }) {
         >
           Posts (Testing)
         </Heading>
-        <Center>
-          <Text fontSize={["lg", "xl"]}>
-            <UnorderedList>
-              {allPostsData.map(({ id, date, title }) => (
-                <ListItem key={id}>
-                  <Link href={`/posts/${id}`}>{title}</Link>
-
-                  <Text fontSize="md" my={"0"}>
-                    <Date dateString={date} />
-                  </Text>
-                </ListItem>
-              ))}
-            </UnorderedList>
-          </Text>
-        </Center>
-
+        <SimpleGrid columns={[1, null, 3]} spacing="24px">
+          {posts.map((post, index) => (
+            <Link href={"/blog/" + post.slug} passHref key={index}>
+              <Card maxW="md" variant={"outline"}>
+                <CardBody>
+                  <Image
+                    src={post.frontMatter.thumbnailUrl}
+                    className="img-fluid mt-1 rounded-start"
+                    alt="thumbnail"
+                    borderRadius="lg"
+                    width={400}
+                    height={300}
+                    objectFit="cover"
+                  />
+                  <Stack mt="6" spacing="3">
+                    <Heading fontSize={"xl"}>{post.frontMatter.title}</Heading>
+                    <Text>{post.frontMatter.description}</Text>
+                    <p className="card-text">
+                      <small className="text-muted">
+                        {post.frontMatter.date}
+                      </small>
+                    </p>
+                  </Stack>
+                </CardBody>
+              </Card>
+            </Link>
+          ))}
+        </SimpleGrid>
         <Box mt={20} align={"center"}>
           <Link href="/">
             <Button
